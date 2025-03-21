@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift lelo Gift</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top-bar {
+            background: yellow;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .nav-icons i {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .logo img:hover {
+            cursor: pointer;
+            height: 300px;
+            width: 300px;
+        } 
+        
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Adjust for mobile */
+            overflow: hidden;
+        }
+        .hero img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero img.active {
+            opacity: 1;
+        }
+        .products {
+            text-align: center;
+            padding: 20px;
+        }
+        .products h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 products per row on mobile */
+            gap: 15px;
+            padding: 0 10px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .price {
+            font-weight: bold;
+            color: red;
+        }
+        .buy-now {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #25D366;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .buy-now i {
+            margin-right: 5px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        footer h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        footer p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+            .hero {
+                height: 400px; /* Adjust for desktop */
+            }
+            .product-list {
+                grid-template-columns: repeat(4, 1fr); /* 4 products per row on desktop */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none; /* Hide nav links on small screens */
+            }
+            .nav-icons {
+                margin-left: auto;
+            }
+            .hero {
+                height: 200px; /* Adjust for small mobile screens */
+            }
+            .product-list {
+                grid-template-columns: repeat(1, 1fr); /* 1 product per row on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">Shop Now! 🛍️ Up to 50% OFF 🔥Made in INDIA</div>
+        <nav>
+            <div class="logo"><img src="logo.png" alt="Gift Kya De"></div>
+            <ul class="nav-links">
+                <li><a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Calendars'%3F">Calendars</a></li>
+                <li><a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Desk%20Organizers'%3F">Desk Organizers</a></li>
+                <li><a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Corporate%20Gifts'%3F">Corporate Gifts</a></li>
+                <li><a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Personalized%20Gifts'%3F">Personalized Gifts</a></li>
+                <li><a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Hampers'%3F">Hampers</a></li>
+                <li><a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Offers'%3F">Offers</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="hero-image.png" alt="Hero Image 1" class="active">
+        <img src="hero2.png" alt="Hero Image 2">
+    </section>
+
+    <section class="products">
+        <h2>NEW ARRIVALS</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="product1.png" alt="Product 1">
+                <p>Hotwheels Art</p>
+                <p class="price"><del>Rs. 1699.00</del> Rs. 999.00</p>
+                <a href="https://wa.me/917564024877?text=Can%20you%20give%20more%20info%20about%20'Hotwheels%20Art'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+            <div class="product">
+                <img src="product2.png" alt="Product 2">
+                <p>Personalized Frame</p>
+                <p class="price"><del>Rs. 399.00</del> Rs. 199.00</p>
+                <a href="https://wa.me/917564024877?text=Can%20you%20give%20more%20info%20about%20'Personalized%20Frame'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+            <div class="product">
+                <img src="product3.png" alt="Product 3">
+                <p>Polaroids</p>
+                <p class="price"><del>Rs. 19.00</del> Rs. 9.00</p>
+                <a href="https://wa.me/917564024877?text=Can%20you%20give%20more%20info%20about%20'Polaroids'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+            <div class="product">
+                <img src="product4.png" alt="Product 4">
+                <p>Personalized Notebooks</p>
+                <p class="price"><del>Rs. 349.00</del> Rs. 229.00</p>
+                <a href="https://wa.me/917564024877?text=Can%20you%20give%20more%20info%20about%20'Personalized%20Notebooks'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+            <div class="product">
+                <img src="product5.png" alt="Product 5">
+                <p>Favorite Character Frame</p>
+                <p class="price"><del>Rs. 399.00</del> Rs. 199.00</p>
+                <a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Favorite%20Character%20Frame'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+            <div class="product">
+                <img src="product6.png" alt="Product 6">
+                <p>Favorite Celebrity</p>
+                <p class="price"><del>Rs. 399.00</del> Rs. 199.00</p>
+                <a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Favorite%20Celebrity'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+            <div class="product">
+                <img src="product7.png" alt="Product 7">
+                <p>Memories in 1</p>
+                <p class="price"><del>Rs. 599.00</del> Rs. 349.00</p>
+                <a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Memories%20in%201'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+            <div class="product">
+                <img src="product8.png" alt="Product 8">
+                <p>Business Card</p>
+                <p class="price"><del>Rs. 1399.00</del> Rs. 999.00</p>
+                <a href="https://wa.me/917564024878?text=Can%20you%20give%20more%20info%20about%20'Business%20Card'%3F" class="buy-now" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buy Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>About Us</h3>
+            <p>We create high-quality, custom-designed products made with love in India, supporting initiatives like <strong>Startup India</strong> and <strong>Make in India</strong>.</p>
+            <h3>Let's Connect</h3>
+            <a href="https://wa.me/917564024877?text=Hello,%20I%20want%20to%20place%20Order!%20❤️" target="_blank" class="buy-now">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <h3>Follow Us</h3>
+            <p style="font-size: 18px; font-weight: bold; margin-top: 10px;">
+                <a href="https://www.instagram.com/being_a_dot/" target="_blank" style="color: #FFD700; text-decoration: none;">
+                    <i class="fab fa-instagram"></i> @being_a_dot
+                </a>
+            </p>
+            <p>
+                <a href="https://www.instagram.com/ishuditss/" target="_blank" style="color: white; text-decoration: none; margin: 0 10px;">
+                    <i class="fab fa-instagram"></i> @ishuditss
+                </a> |
+                <a href="https://www.instagram.com/baithe_baithe_kamao/" target="_blank" style="color: white; text-decoration: none; margin: 0 10px;">
+                    <i class="fab fa-instagram"></i> @baithe_baithe_kamao
+                </a>
+            </p>
+        </div>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">© 2025 Being A Dot. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let images = document.querySelectorAll('.hero img');
+        let currentIndex = 0;
+
+        function changeHeroImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(changeHeroImage, 3000); // Switch image every 3 seconds
+    </script>
+</body>
+</html>
